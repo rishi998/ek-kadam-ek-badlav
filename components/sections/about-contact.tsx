@@ -15,7 +15,7 @@ export function AboutContact() {
   return (
     <section
       id="about"
-      className="scroll-mt-[min(8.5rem,calc(6rem+env(safe-area-inset-top)))] bg-gradient-to-b from-brand-section/30 via-white to-background py-20 sm:py-24"
+      className="scroll-mt-[min(10rem,calc(8rem+env(safe-area-inset-top)))] bg-gradient-to-b from-brand-section/30 via-white to-background py-20 sm:py-24"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
@@ -60,7 +60,7 @@ export function AboutContact() {
               delay: reduce ? 0 : 0.06,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="scroll-mt-[min(8.5rem,calc(6rem+env(safe-area-inset-top)))] rounded-[2rem] border border-white bg-white p-8 shadow-[0_8px_24px_rgba(0,0,0,0.08),0_28px_64px_-36px_rgba(0,0,0,0.1)]"
+            className="scroll-mt-[min(10rem,calc(8rem+env(safe-area-inset-top)))] rounded-[2rem] border border-white bg-white p-8 shadow-[0_8px_24px_rgba(0,0,0,0.08),0_28px_64px_-36px_rgba(0,0,0,0.1)]"
           >
             <h3 className="font-heading text-2xl font-extrabold tracking-[-0.02em] text-brand-text">
               Contact & pickup

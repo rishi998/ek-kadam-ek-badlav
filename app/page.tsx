@@ -42,7 +42,7 @@ export default function Home() {
           </div>
 
           <aside
-            className="sticky top-[calc(8rem+env(safe-area-inset-top))] mt-10 hidden space-y-6 self-start px-4 pb-10 lg:block xl:px-0"
+            className="sticky top-[calc(10rem+env(safe-area-inset-top))] mt-10 hidden space-y-6 self-start px-4 pb-10 lg:block xl:px-0"
             aria-label="Sponsored"
           >
             <AdSlot variant="sidebar" />

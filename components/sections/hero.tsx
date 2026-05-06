@@ -92,7 +92,7 @@ export function Hero() {
     <section
       id="home"
       ref={ref}
-      className="relative isolate flex min-h-[100dvh] max-w-[100vw] items-end overflow-x-hidden overflow-y-visible pb-12 pt-[max(6.75rem,calc(5.5rem+env(safe-area-inset-top)))] sm:pb-16 sm:pt-[max(7.5rem,calc(6rem+env(safe-area-inset-top)))] md:pb-20"
+      className="relative isolate flex min-h-[100dvh] max-w-[100vw] items-end overflow-x-hidden overflow-y-visible pb-12 pt-[max(6.75rem,calc(5.5rem+env(safe-area-inset-top)))] sm:pb-16 sm:pt-[max(8rem,calc(6.5rem+env(safe-area-inset-top)))] md:pb-20 lg:pt-[max(8.5rem,calc(7rem+env(safe-area-inset-top)))]"
     >
       <HeroBackdrop showPhoto={heroPhoto} />
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-[#FFFDF9]/40 to-background" />
@@ -125,7 +125,7 @@ export function Hero() {
       ) : null}
 
       <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid items-end gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-12">
+        <div className="grid items-end gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-12">
           <div>
             <motion.div
               initial={reduce ? false : { opacity: 0, y: 18 }}
@@ -134,19 +134,8 @@ export function Hero() {
                 duration: reduce ? 0 : 0.55,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="flex flex-wrap items-center gap-3 sm:gap-4"
+              className="flex flex-wrap items-center gap-3 mt-6 sm:mt-8 lg:mt-10"
             >
-              <div className="relative overflow-hidden rounded-2xl border border-white/90 bg-white p-2 shadow-[0_8px_24px_rgba(0,0,0,0.08),0_2px_8px_rgba(0,0,0,0.04)] ring-1 ring-brand-teal/10">
-                <Image
-                  src="/ngo-logo.png"
-                  alt=""
-                  width={200}
-                  height={220}
-                  priority
-                  fetchPriority="high"
-                  className="h-24 w-auto max-h-28 max-w-[min(72vw,200px)] object-contain sm:h-28"
-                />
-              </div>
               <p className="inline-flex items-center gap-2 rounded-full border border-brand-teal/12 bg-white px-3 py-1.5 text-xs font-semibold text-brand-text shadow-[0_4px_16px_rgba(0,0,0,0.06)] backdrop-blur-md sm:text-sm">
                 <HeartHandshake className="size-4 text-brand-teal" aria-hidden />
                 {SITE.tagline}
@@ -154,7 +143,7 @@ export function Hero() {
             </motion.div>
 
             <motion.h1
-              className="font-heading mt-6 max-w-4xl text-[clamp(2.5rem,6.5vw,4.75rem)] font-extrabold leading-[1.05] tracking-[-0.02em] text-brand-text"
+              className="font-heading mt-4 max-w-4xl text-[clamp(2.5rem,6.5vw,4.75rem)] font-extrabold leading-[1.05] tracking-[-0.02em] text-brand-text sm:mt-5"
               initial={reduce ? false : { opacity: 0, y: 22 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{
@@ -234,7 +223,7 @@ export function Hero() {
             </motion.div>
 
             <motion.ul
-              className="mt-7 flex flex-wrap gap-2"
+              className="mt-6 flex flex-wrap gap-2 sm:mt-7"
               initial={reduce ? false : { opacity: 0, y: 12 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{
@@ -309,7 +298,7 @@ export function Hero() {
         </div>
 
         <motion.div
-          className="mt-10 flex justify-center"
+          className="mt-8 flex justify-center sm:mt-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: reduce ? 0 : 0.6 }}

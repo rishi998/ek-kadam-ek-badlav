@@ -1,3 +1,6 @@
+/** Canonical site origin — keep in sync with Vercel env `NEXT_PUBLIC_SITE_URL` for production */
+export const SITE_CANONICAL_ORIGIN = "https://ekkademekbadlav.org" as const;
+
 export const SITE = {
   name: "EK KADAM EK BADLAV",
   tagline: "Connect through kindness.",

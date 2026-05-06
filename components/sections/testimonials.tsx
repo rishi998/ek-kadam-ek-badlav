@@ -58,7 +58,7 @@ export function Testimonials() {
   const p = people[i]!;
 
   return (
-    <section className="scroll-mt-[min(8.5rem,calc(6rem+env(safe-area-inset-top)))] bg-gradient-to-b from-white to-brand-section/40 py-20 pb-24 sm:py-24 sm:pb-28">
+    <section className="scroll-mt-[min(10rem,calc(8rem+env(safe-area-inset-top)))] bg-gradient-to-b from-white to-brand-section/40 py-20 pb-24 sm:py-24 sm:pb-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-bold uppercase tracking-[0.22em] text-brand-teal">

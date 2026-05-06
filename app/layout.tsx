@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/site-config";
+import { getSiteUrl } from "@/lib/site-url";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -21,7 +22,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://ekkademekbadlav.org";
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

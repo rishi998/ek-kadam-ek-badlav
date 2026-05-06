@@ -60,7 +60,7 @@ export function Impact() {
   return (
     <section
       id="impact"
-      className="scroll-mt-[min(8.5rem,calc(6rem+env(safe-area-inset-top)))] bg-gradient-to-b from-white via-brand-section/30 to-white py-20 sm:py-24"
+      className="scroll-mt-[min(10rem,calc(8rem+env(safe-area-inset-top)))] bg-gradient-to-b from-white via-brand-section/30 to-white py-20 sm:py-24"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)]">

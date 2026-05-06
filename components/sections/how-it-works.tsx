@@ -27,7 +27,7 @@ export function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="relative scroll-mt-[min(8.5rem,calc(6rem+env(safe-area-inset-top)))] overflow-hidden bg-gradient-to-b from-white via-brand-section/50 to-white py-20 sm:py-24"
+      className="relative scroll-mt-[min(10rem,calc(8rem+env(safe-area-inset-top)))] overflow-hidden bg-gradient-to-b from-white via-brand-section/50 to-white py-20 sm:py-24"
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(900px_circle_at_10%_10%,rgba(255,138,30,0.05),transparent_55%),radial-gradient(800px_circle_at_90%_30%,rgba(15,139,141,0.1),transparent_52%)]" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

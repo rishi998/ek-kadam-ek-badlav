@@ -95,64 +95,57 @@ export function Navbar() {
           </div>
         </div>
 
-        {/* —— Main floating nav — anchored left with page grid —— */}
+        {/* —— Main nav — wide bar, large logo left (reference: premium SaaS navbar) —— */}
         <div className="pointer-events-auto mx-auto w-full max-w-7xl">
           <div
             className={cn(
-              "nav-glass-shell flex w-full items-center gap-1.5 rounded-full border-2 px-1.5 py-1.5 backdrop-blur-2xl backdrop-saturate-150 transition-[box-shadow,transform] duration-300 sm:gap-3 sm:px-3 sm:py-2",
-              scrolled && "nav-glass-shell-scrolled",
+              "relative z-10 flex w-full items-center justify-between gap-3 overflow-visible rounded-full border border-neutral-200/90 bg-white px-3 py-2 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.08)] backdrop-blur-sm transition-[box-shadow] duration-300 sm:gap-5 sm:px-4 sm:py-2.5 lg:justify-start lg:gap-6 lg:px-5 lg:py-2.5",
+              scrolled &&
+                "shadow-[0_12px_40px_-14px_rgba(0,0,0,0.1)] ring-1 ring-black/[0.04]",
             )}
           >
             <Link
               href="#home"
               className={cn(
-                "group/brand flex min-w-0 shrink-0 items-center gap-3 py-0.5 pl-1 pr-1 sm:pl-1.5",
-                "rounded-md outline-none transition-transform duration-300 ease-out",
-                "hover:scale-[1.02] motion-reduce:transition-none motion-reduce:hover:scale-100",
-                "focus-visible:rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-saffron",
+                "group/brand mr-8 flex shrink-0 items-center overflow-visible py-0 pl-0.5 pr-0 sm:mr-10 md:mr-12 lg:mr-14",
+                "rounded-lg outline-none transition-opacity duration-300 ease-out",
+                "hover:opacity-90 motion-reduce:transition-none",
+                "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-saffron",
               )}
             >
               <Image
                 src="/ngo-logo.png"
-                alt=""
-                width={104}
-                height={114}
+                alt={`${SITE.name} — home`}
+                width={512}
+                height={512}
                 priority
                 fetchPriority="high"
-                className="h-8 w-auto shrink-0 object-contain sm:h-10 md:h-11 md:max-h-[52px] lg:h-[52px]"
+                className="block h-[3.15rem] w-auto max-h-full object-contain object-left sm:h-[3.6rem] md:h-[3.825rem] lg:h-[4.05rem]"
               />
-              <span className="font-heading min-w-0 leading-[1.12]">
-                <span className="block text-[10px] font-semibold tracking-[-0.04em] text-brand-text sm:text-[11px] md:text-xs md:tracking-[-0.03em]">
-                  EK KADAM EK
-                </span>
-                <span className="mt-px block text-[10px] font-bold tracking-[0.06em] text-brand-saffron sm:text-[11px] md:text-xs md:tracking-[0.08em]">
-                  BADLAV
-                </span>
-              </span>
             </Link>
 
             <nav
-              className="ml-auto hidden items-center gap-0.5 lg:ml-0 lg:flex lg:flex-1 lg:justify-center"
+              className="hidden min-w-0 flex-1 items-center justify-center gap-0.5 lg:flex xl:gap-1"
               aria-label="Primary"
             >
               {NAV_LINKS.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="group relative rounded-full px-3 py-2 text-[13px] font-semibold text-brand-text-muted transition-colors duration-200 hover:text-brand-text"
+                  className="group relative whitespace-nowrap rounded-lg px-2.5 py-2 text-[15px] font-bold tracking-tight text-brand-text transition-colors duration-200 hover:text-brand-teal xl:px-3.5 xl:text-base"
                 >
                   {item.label}
-                  <span className="absolute inset-x-3 -bottom-px h-0.5 origin-left scale-x-0 rounded-full bg-gradient-to-r from-brand-teal via-brand-teal-secondary to-brand-saffron transition-transform duration-300 ease-out group-hover:scale-x-100" />
+                  <span className="absolute inset-x-2.5 -bottom-px h-[3px] origin-left scale-x-0 rounded-full bg-gradient-to-r from-brand-teal to-brand-saffron transition-transform duration-300 ease-out group-hover:scale-x-100 xl:inset-x-3.5" />
                 </Link>
               ))}
             </nav>
 
-            <div className="ml-auto flex shrink-0 items-center gap-1.5 sm:gap-2">
+            <div className="flex shrink-0 items-center gap-2 sm:gap-3">
               <a
                 href={`tel:+91${SITE.phoneDisplay}`}
                 className={cn(
                   buttonVariants({ variant: "ctaOutline", size: "sm" }),
-                  "hidden h-9 rounded-full px-3 text-[12px] xl:inline-flex",
+                  "hidden h-10 rounded-full px-4 text-sm font-bold xl:inline-flex",
                 )}
               >
                 <span className="mr-1" aria-hidden>
@@ -164,13 +157,13 @@ export function Navbar() {
                 type="button"
                 variant="cta"
                 onClick={() => openDonation()}
-                className="h-9 rounded-full px-4 text-[13px] sm:h-10 sm:px-5 sm:text-sm"
+                className="h-10 rounded-full px-5 text-sm font-extrabold sm:h-11 sm:px-6 sm:text-[15px] lg:text-base"
               >
                 Donate Now
               </Button>
               <button
                 type="button"
-                className="grid size-10 place-items-center rounded-full border border-black/[0.06] bg-white/70 text-brand-text shadow-sm lg:hidden"
+                className="grid size-11 place-items-center rounded-full border border-neutral-200 bg-white text-brand-text shadow-sm lg:hidden"
                 aria-expanded={mobileOpen}
                 aria-controls="mobile-nav-sheet"
                 onClick={() => setMobileOpen(true)}
@@ -247,7 +240,7 @@ export function Navbar() {
                   >
                     <Link
                       href={item.href}
-                      className="block rounded-2xl px-4 py-3.5 text-[16px] font-semibold text-brand-text hover:bg-white/70 active:bg-white/90"
+                      className="block rounded-2xl px-4 py-3.5 text-[17px] font-bold tracking-tight text-brand-text hover:bg-white/70 active:bg-white/90"
                       onClick={() => setMobileOpen(false)}
                     >
                       {item.label}

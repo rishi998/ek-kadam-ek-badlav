@@ -64,7 +64,7 @@ export function Initiatives() {
   return (
     <section
       id="initiatives"
-      className="scroll-mt-[min(8.5rem,calc(6rem+env(safe-area-inset-top)))] bg-gradient-to-b from-background via-brand-section/80 to-background py-20 sm:py-24"
+      className="scroll-mt-[min(10rem,calc(8rem+env(safe-area-inset-top)))] bg-gradient-to-b from-background via-brand-section/80 to-background py-20 sm:py-24"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
